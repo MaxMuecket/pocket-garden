@@ -7,10 +7,10 @@
 
 .title {
   text-decoration: none;
-  color: #000;
-  font-size: 55px;
   display: flex;
   justify-content: flex-end;
-  font-family: 'Roboto', sans-serif;
+  color: var(--primary-text-color);
+  font-size: 3.438em;
+  font-family: var(--font-family);
   padding: 0.5em;
 }
