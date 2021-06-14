@@ -1,55 +1,32 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Route, RouteProps, Switch } from 'react-router-dom';
+
+import LandingPage from './pages/LandingPage/LandingPage';
+
 import styles from './App.module.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+type CustomRouteProps = RouteProps & {
+  Component: () => JSX.Element;
+  path: string;
+};
+
+const routes: CustomRouteProps[] = [
+  { path: '/', Component: LandingPage, exact: true },
+];
 
 function App(): JSX.Element {
-  const [count, setCount] = useState<number>(0);
-
   return (
-    <Router>
-      <div className={styles.App}>
-        <header className={styles['App-header']}>
-          <img src={logo} className={styles['App-logo']} alt="logo" />
-          <p>Hello Vite + React!</p>
-          <p>
-            <button onClick={() => setCount((count) => count + 1)}>
-              count is: {count}
-            </button>
-          </p>
-          <p>
-            Edit <code>App.tsx</code> and save to test HMR updates.
-          </p>
-          <p>
-            <a
-              className={styles['App-link']}
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-            {' | '}
-            <a
-              className={styles['App-link']}
-              href="https://vitejs.dev/guide/features.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Vite Docs
-            </a>
-          </p>
-          <Switch>
-            <Route path="/about">
-              <main>About</main>
+    <div className={styles.container}>
+      <BrowserRouter>
+        <Switch>
+          {routes.map(({ Component, ...routeProps }) => (
+            <Route key={routeProps.path} {...routeProps}>
+              <Component />
             </Route>
-            <Route path="/">
-              <main>Home</main>
-            </Route>
-          </Switch>
-        </header>
-      </div>
-    </Router>
+          ))}
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 }
 

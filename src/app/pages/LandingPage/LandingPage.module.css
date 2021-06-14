@@ -1,0 +1,16 @@
+.container {
+  background-image: url('../../assets/cover.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.title {
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  color: var(--primary-text-color);
+  font-size: 3.438em;
+  font-family: var(--font-family);
+  padding: 0.5em;
+}
