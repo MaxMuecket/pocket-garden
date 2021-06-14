@@ -4,9 +4,13 @@ import styles from './LandingPage.module.css';
 
 function LandingPage(): JSX.Element {
   return (
-    <div className={styles.container}>
-      <img src="cover.png" alt=""></img>
-    </div>
+    <header>
+      <div className={styles.container}>
+        <a className={styles.title} href="#">
+          Pocket-<br></br>Garden
+        </a>
+      </div>
+    </header>
   );
 }
 

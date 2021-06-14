@@ -1,3 +1,16 @@
 .container {
-  display: grid;
+  background-image: url('../../assets/cover.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.title {
+  text-decoration: none;
+  color: #000;
+  font-size: 55px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Roboto', sans-serif;
+  padding: 0.5em;
 }
