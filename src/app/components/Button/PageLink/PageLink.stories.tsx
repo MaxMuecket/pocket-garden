@@ -8,25 +8,25 @@ export default {
 };
 
 export const NewPlant = (): JSX.Element => (
-  <PageLink pathname="#" variant="newPlant">
+  <PageLink pathname="newPlant" variant="newPlant">
     New<span className={styles.accent}>P</span>lant
   </PageLink>
 );
 
 export const PlantList = (): JSX.Element => (
-  <PageLink pathname="#" variant="plantList">
+  <PageLink pathname="plantList" variant="plantList">
     Plant<span className={styles.accent}>L</span>ist
   </PageLink>
 );
 
 export const NewTask = (): JSX.Element => (
-  <PageLink pathname="#" variant="newTask">
+  <PageLink pathname="newTask" variant="newTask">
     New<span className={styles.accent}>T</span>ask
   </PageLink>
 );
 
 export const Gardening = (): JSX.Element => (
-  <PageLink pathname="#" variant="gardening">
+  <PageLink pathname="gardening" variant="gardening">
     Gar<span className={styles.accent}>d</span>ening
   </PageLink>
 );
