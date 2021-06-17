@@ -1,0 +1,67 @@
+.newPlant {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  width: 12.5rem;
+  height: 12.5rem;
+  line-height: 12.5rem;
+  border-radius: 100%;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+  font-size: 2.188rem;
+  font-family: var(--font-family);
+  font-weight: 300;
+}
+
+.plantList {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: var(--secondary-text-color);
+  width: 10.8rem;
+  height: 10.8rem;
+  line-height: 10.8rem;
+  border-radius: 100%;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+  font-size: 2.188rem;
+  font-family: var(--font-family);
+  font-weight: 300;
+}
+
+.newTask {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: var(--secondary-text-color);
+  width: 13.25rem;
+  height: 13.25rem;
+  line-height: 13.25rem;
+  border-radius: 100%;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+  font-size: 2.188rem;
+  font-family: var(--font-family);
+  font-weight: 300;
+}
+
+.gardening {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  width: 14rem;
+  height: 14rem;
+  line-height: 14rem;
+  border-radius: 100%;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+  font-size: 2.188rem;
+  font-family: var(--font-family);
+  font-weight: 300;
+}
+
+.accent {
+  color: var(--accent-color);
+}

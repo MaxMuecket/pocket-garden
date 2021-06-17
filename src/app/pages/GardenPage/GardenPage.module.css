@@ -1,0 +1,35 @@
+.container {
+  background-image: url('../../assets/leaf.png');
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.header__title {
+  font-size: 3.438rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 1rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1rem 11.75rem 0.8rem 12.5rem;
+  grid-template-rows: 1.5rem 11.65rem 7.65rem 13.25rem;
+}
+
+.main__newPlant {
+  grid-column: 4;
+  grid-row: 2;
+}
+.main__plantList {
+  grid-column: 2;
+  grid-row: 3;
+}
+.main__newTask {
+  grid-column: 3;
+  grid-row: 4;
+}
+.main__gardening {
+  grid-column: 2;
+  grid-row: 8;
+}
