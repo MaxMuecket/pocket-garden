@@ -16,6 +16,7 @@
   --primary-text-color: #000;
   --secondary-text-color: #fff;
   --background-color: #e9efed;
+  --background-desktop-color: #fff;
   --accent-color: #f9c452;
 
   /* Sizes */
@@ -28,5 +29,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-family);
   color: var(--primary-text-color);
-  background-color: #fff;
+  background-color: var(--background-desktop-color);
 }

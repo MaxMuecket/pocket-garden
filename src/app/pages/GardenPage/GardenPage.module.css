@@ -13,8 +13,8 @@
 
 .main {
   display: grid;
-  grid-template-columns: 1rem 11.75rem 0.8rem 12.5rem;
-  grid-template-rows: 1.5rem 11.65rem 7.65rem 13.25rem;
+  grid-template-columns: 4% 43% 3% 48%;
+  grid-template-rows: 4% 22% 15% 26%;
 }
 
 .main__newPlant {
@@ -31,5 +31,5 @@
 }
 .main__gardening {
   grid-column: 2;
-  grid-row: 8;
+  grid-row: 5;
 }
