@@ -4,7 +4,7 @@ import {
   NewPlant,
   NewTask,
   PlantList,
-} from '../../components/Button/PageLink/PageLink.stories';
+} from '../../components/PageLink/PageLink.stories';
 
 import styles from './GardenPage.module.css';
 
