@@ -1,14 +1,14 @@
 import React from 'react';
 
 import { Story } from '@storybook/react';
-import PageTextarea, { PageInputProps } from './PageTextarea';
+import PageTextarea, { PageTextareaProps } from './PageTextarea';
 
 export default {
   title: 'Component/PageTextarea',
   component: PageTextarea,
 };
 
-const Template: Story<PageInputProps> = (args) => <PageTextarea {...args} />;
+const Template: Story<PageTextareaProps> = (args) => <PageTextarea {...args} />;
 
 export const newPlantNote = Template.bind({});
 newPlantNote.args = {
