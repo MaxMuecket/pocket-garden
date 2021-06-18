@@ -1,0 +1,30 @@
+.mainButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 11rem;
+  height: 3.75rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-text-color);
+  border-radius: 6.25rem 6.25rem 6.25rem 0;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.mainButton__title {
+  padding-left: 0.25em;
+  font-family: var(--font-family);
+  color: var(--primary-text-color);
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.mainButton__circle {
+  width: 2.7rem;
+  height: 2.7rem;
+  background-color: var(--secondary-color);
+  border-radius: 100%;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+}
