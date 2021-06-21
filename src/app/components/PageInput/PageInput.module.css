@@ -1,0 +1,43 @@
+.newPlantName {
+  width: 24.75rem;
+  height: 3rem;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+  border-width: 0;
+  font-family: var(--font-family);
+  font-weight: 300;
+  color: var(--primary-text-color);
+  font-size: 1.25rem;
+  padding-left: 1rem;
+}
+
+.newTaskTitle {
+  width: 24.75rem;
+  height: 3rem;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+  border-width: 0;
+  font-family: var(--font-family);
+  font-weight: 300;
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+  font-size: 1.25rem;
+  padding-left: 1rem;
+  border-radius: 0 1.875rem 0 0;
+}
+
+.newTaskDate {
+  width: 24.75rem;
+  height: 3rem;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+  border-width: 0;
+  font-family: var(--font-family);
+  font-weight: 300;
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+  font-size: 1.25rem;
+  padding-left: 1rem;
+  border-radius: 0 0 0 1.875rem;
+}
+
+::placeholder {
+  color: var(--primary-text-color);
+}
