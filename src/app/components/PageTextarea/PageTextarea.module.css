@@ -1,0 +1,30 @@
+.newPlantNote {
+  width: 24.75rem;
+  height: 8.938rem;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+  border-width: 0;
+  font-family: var(--font-family);
+  font-weight: 300;
+  color: var(--primary-text-color);
+  font-size: 1.25rem;
+  padding: 1rem 1rem;
+  border-radius: 0 0 1.875rem;
+}
+
+.newTaskDescription {
+  width: 24.75rem;
+  height: 33.188rem;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+  border-width: 0;
+  font-family: var(--font-family);
+  font-weight: 300;
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+  font-size: 1.25rem;
+  padding: 1rem 1rem;
+  border-radius: 0 0 1.875rem;
+}
+
+::placeholder {
+  color: var(--primary-text-color);
+}
