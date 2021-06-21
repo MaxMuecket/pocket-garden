@@ -37,3 +37,7 @@
   padding-left: 1rem;
   border-radius: 0 0 0 1.875rem;
 }
+
+::placeholder {
+  color: var(--primary-text-color);
+}
