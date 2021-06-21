@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './PlaceButton.module.css';
 
-const buttonDate = ['sunny', 'half shady', 'shady'];
+const buttonPlace = ['sunny', 'half shady', 'shady'];
 
 function PlaceButton(): JSX.Element {
   const [currentPlace, setCurrentPlace] = useState(0);
@@ -13,7 +13,7 @@ function PlaceButton(): JSX.Element {
 
   return (
     <button className={styles.button} onClick={() => handleClick()}>
-      {buttonDate[currentPlace]}
+      {buttonPlace[currentPlace]}
     </button>
   );
 }
