@@ -11,6 +11,11 @@
   border: none;
   font-size: 1.2rem;
   padding: 0.5rem;
+  cursor: pointer;
+}
+
+.mainButton:focus {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
 }
 
 .mainButton__title {
@@ -27,4 +32,5 @@
   background-color: var(--secondary-color);
   border-radius: 100%;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
