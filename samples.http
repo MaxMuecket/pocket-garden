@@ -5,12 +5,13 @@
 POST {{baseUrl}}/api/plants
 Content-Type: application/json
 
-{"imagePath": "URL/....",
+{
+"imagePath": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Athyrium_filix-femina.jpg/800px-Athyrium_filix-femina.jpg",
 "name": "Fern",
 "firstMonth": 0,
 "lastMonth": 11,
 "place": 2,
-"note": "TriTraTrulala",
+"note": "The study of ferns and other pteridophytes is called pteridology. A pteridologist is a specialist in the study of pteridophytes in a broader sense that includes the more distantly related lycophytes.",
 "active": false
 }
 
