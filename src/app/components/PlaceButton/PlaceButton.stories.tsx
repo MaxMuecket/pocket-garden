@@ -1,14 +1,16 @@
 import React from 'react';
 
 import { Story } from '@storybook/react';
-import PlaceButton from './PlaceButton';
+import PlaceButton, { PlaceButtonProps } from './PlaceButton';
 
 export default {
   title: 'Component/PlaceButton',
   component: PlaceButton,
 };
 
-const Template: Story = (args) => <PlaceButton {...args} />;
+const Template: Story<PlaceButtonProps> = (args) => <PlaceButton {...args} />;
 
 export const Place = Template.bind({});
-Place.args = {};
+Place.args = {
+  place: 1,
+};
