@@ -1,0 +1,23 @@
+@port = {{$dotenv PORT}}
+@baseUrl = http://localhost:{{port}}
+
+### Add a plant
+POST {{baseUrl}}/api/plants
+Content-Type: application/json
+
+{"imagePath": "URL/....",
+"name": "Fern",
+"firstMonth": 0,
+"lastMonth": 11,
+"place": 2,
+"note": "TriTraTrulala",
+"active": false
+}
+
+### Find a plant
+GET {{baseUrl}}/api/plants/Fern
+Content-Type: application/json
+
+### Delete a plant
+DELETE  {{baseUrl}}/api/plants/Fern
+Content-Type: application/json
