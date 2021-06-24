@@ -15,7 +15,7 @@ type CustomRouteProps = RouteProps & {
 const routes: CustomRouteProps[] = [
   { path: '/', Component: LandingPage, exact: true },
   { path: '/garden', Component: GardenPage },
-  { path: '/new-plant-page', Component: NewPlantPage },
+  { path: '/new-plant', Component: NewPlantPage },
 ];
 
 function App(): JSX.Element {
