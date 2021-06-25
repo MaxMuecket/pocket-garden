@@ -1,5 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './DateButton.module.css';
+
+export type DateButtonProps = {
+  month: number;
+  onMonthChange: (month: number) => void;
+};
 
 const buttonDate = [
   'Jan',
@@ -16,17 +21,14 @@ const buttonDate = [
   'Dec',
 ];
 
-function DateButton(): JSX.Element {
-  const [currentMonth, setCurrentMonth] = useState(0);
-
+function DateButton({ month, onMonthChange }: DateButtonProps): JSX.Element {
   function handleClick() {
-    setCurrentMonth(currentMonth + 1);
-    if (currentMonth === 11) setCurrentMonth(0);
+    onMonthChange((month + 1) % 11);
   }
 
   return (
     <button className={styles.button} onClick={() => handleClick()}>
-      {buttonDate[currentMonth]}
+      {buttonDate[month]}
     </button>
   );
 }

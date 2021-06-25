@@ -5,7 +5,7 @@ export type PageInputProps = {
   label?: string;
   placeholder: string;
   value: string;
-  onChange: (value: string) => void;
+  onNameChange: (name: string) => void;
   variant: 'newPlantName' | 'newTaskTitle' | 'newTaskDate';
 };
 
@@ -13,8 +13,8 @@ function PageInput({
   label,
   placeholder,
   value,
-  onChange,
   variant,
+  onNameChange,
 }: PageInputProps): JSX.Element {
   return (
     <label className={styles.container}>
@@ -23,7 +23,7 @@ function PageInput({
         className={styles[variant]}
         placeholder={placeholder}
         value={value}
-        onChange={(event) => onChange(event.target.value)}
+        onChange={(event) => onNameChange(event.target.value)}
       />
     </label>
   );

@@ -8,7 +8,7 @@ export default {
 };
 
 export const NewPlant = (): JSX.Element => (
-  <PageLink pathname="newPlant" variant="newPlant">
+  <PageLink pathname="new-plant" variant="newPlant">
     New<span className={styles.accent}>P</span>lant
   </PageLink>
 );

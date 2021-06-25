@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './PlaceButton.module.css';
+
+export type PlaceButtonProps = {
+  place: number;
+  onPlaceChange: (place: number) => void;
+};
 
 const buttonPlace = ['sunny', 'half shady', 'shady'];
 
-function PlaceButton(): JSX.Element {
-  const [currentPlace, setCurrentPlace] = useState(0);
-
+function PlaceButton({ place, onPlaceChange }: PlaceButtonProps): JSX.Element {
   function handleClick() {
-    setCurrentPlace(currentPlace + 1);
-    if (currentPlace === 2) setCurrentPlace(0);
+    onPlaceChange((place + 1) % 3);
   }
 
   return (
     <button className={styles.button} onClick={() => handleClick()}>
-      {buttonPlace[currentPlace]}
+      {buttonPlace[place]}
     </button>
   );
 }

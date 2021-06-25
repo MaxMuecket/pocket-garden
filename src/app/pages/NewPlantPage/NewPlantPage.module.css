@@ -1,0 +1,85 @@
+.container {
+  background-image: url('../../assets/leaf.png');
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.header__title {
+  font-size: 3.4rem;
+  font-weight: 300;
+  margin: 0;
+  padding: 1rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 4% 1.5% 89% 5.5%;
+  grid-template-rows: 40% 10% 10% 10% 10% 26%;
+}
+
+.form__file {
+  width: 24.75rem;
+  height: 16.375rem;
+  background-color: var(--background-desktop-color);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+  border-radius: 0 7rem 0 0;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.form__inputName {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.form__sowing {
+  grid-column: 3;
+  grid-row: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.form__sowing_line {
+  background-color: var(--background-desktop-color);
+  width: 3em;
+  height: 0.3em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
+}
+
+.form__place {
+  grid-column: 3;
+  grid-row: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.form__perennial {
+  grid-column: 3;
+  grid-row: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.form__inputNote {
+  grid-column: 2;
+  grid-row: 6;
+}
+
+.form__submitButton {
+  grid-column: 3;
+  grid-row: 7;
+  justify-self: center;
+}
+
+h3 {
+  font-family: var(--font-family);
+  font-size: 1.3em;
+  font-weight: 300;
+}
