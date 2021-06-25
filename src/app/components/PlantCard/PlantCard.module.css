@@ -1,0 +1,45 @@
+.container {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  background-color: transparent;
+  gap: 1em;
+  margin: 1em;
+}
+
+.cardImage {
+  position: relative;
+  height: 9em;
+  overflow: hidden;
+  border-radius: 0 0 0 5em;
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.25);
+}
+
+.cardImage img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cardInfo {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  height: 9em;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.25);
+}
+
+.cardInfo__title {
+  font-family: var(--font-family);
+  font-weight: 300;
+  padding: 0.5em;
+  hyphens: auto;
+}
+
+.cardInfo__button {
+  width: 1em;
+  height: 1em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.5em;
+  padding-top: 1em;
+}
