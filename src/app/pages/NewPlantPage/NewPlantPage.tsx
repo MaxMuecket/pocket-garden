@@ -18,7 +18,6 @@ function NewPlantPage(): JSX.Element {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(name, active, note, firstMonth, lastMonth, place);
   }
 
   return (
