@@ -1,33 +1,37 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, LinkProps, useLocation } from 'react-router-dom';
 
 import styles from './SideNav.module.css';
 
 export type SideNavProps = {
-  children: string;
-  garden?: string;
-  newPlant?: string;
-  plantList?: string;
-  newTask?: string;
-  gardening?: string;
+  showSideNavLabel: string;
 };
 
-function SideNav({
-  children,
-  garden,
-  newPlant,
-  plantList,
-  newTask,
-  gardening,
-}: SideNavProps): JSX.Element {
+type CustomLinkProps = LinkProps & {
+  pageName: string;
+};
+
+const links: CustomLinkProps[] = [
+  { to: '/garden', pageName: 'Garden' },
+  { to: '/new-plant', pageName: 'NewPlant' },
+  { to: '/plant-list', pageName: 'PlantList' },
+  { to: '/new-task', pageName: 'NewTask' },
+  { to: '/gardening', pageName: 'Gardening' },
+];
+
+function SideNav({ showSideNavLabel }: SideNavProps): JSX.Element {
   const [active, setActive] = useState(false);
 
   const showSideNav = () => setActive(!active);
+
+  const location = useLocation();
+
+  const filteredLinks = links.filter((link) => link.to !== location.pathname);
   return (
     <>
-      <div className={styles.sideNav}>
+      <div>
         <button className={styles.sideNav__button} onClick={showSideNav}>
-          {children}
+          {showSideNavLabel}
         </button>
       </div>
       <nav
@@ -40,13 +44,13 @@ function SideNav({
             className={styles.sideNav__button_active}
             onClick={showSideNav}
           >
-            {children}
+            {showSideNavLabel}
           </button>
-          <Link to="/garden">{garden}</Link>
-          <Link to="/new-plant">{newPlant}</Link>
-          <Link to="/plant-list">{plantList}</Link>
-          <Link to="/new-task">{newTask}</Link>
-          <Link to="/gardening">{gardening}</Link>
+          {filteredLinks.map(({ ...linkProps }) => (
+            <Link key={linkProps.pageName} {...linkProps}>
+              {linkProps.pageName}
+            </Link>
+          ))}
         </div>
       </nav>
     </>

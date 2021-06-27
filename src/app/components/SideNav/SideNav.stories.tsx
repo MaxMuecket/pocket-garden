@@ -14,9 +14,5 @@ const Template: Story<SideNavProps> = (args) => <SideNav {...args} />;
 
 export const Garden = Template.bind({});
 Garden.args = {
-  children: 'Garden',
-  newPlant: 'NewPlant',
-  plantList: 'PlantList',
-  newTask: 'NewTask',
-  gardening: 'Gardening',
+  showSideNavLabel: 'Garden',
 };
