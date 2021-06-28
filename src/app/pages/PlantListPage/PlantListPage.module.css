@@ -1,0 +1,17 @@
+.container {
+  background-image: url('../../assets/leaf.png');
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.main {
+  padding-right: 1em;
+  display: grid;
+  column-gap: 1em;
+  height: 50em;
+  overflow: scroll;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
