@@ -29,5 +29,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: var(--font-family);
   color: var(--primary-text-color);
-  background-color: var(--background-desktop-color);
+  background-color: var(--background-color);
 }

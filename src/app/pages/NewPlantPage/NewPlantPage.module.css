@@ -4,12 +4,9 @@
   height: 100vh;
 }
 
-.header__title {
-  font-size: 3.4rem;
-  font-weight: 300;
-  margin: 0;
-  padding: 1rem;
-}
+/* .header {
+  padding-left: 0.5em;
+} */
 
 .form {
   display: grid;

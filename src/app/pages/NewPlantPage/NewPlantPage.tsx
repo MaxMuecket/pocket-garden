@@ -4,6 +4,7 @@ import MainButton from '../../components/MainButton/MainButton';
 import PageInput from '../../components/PageInput/PageInput';
 import PageTextarea from '../../components/PageTextarea/PageTextarea';
 import PlaceButton from '../../components/PlaceButton/PlaceButton';
+import SideNav from '../../components/SideNav/SideNav';
 import ToggleSwitch from '../../components/ToggleSwitch/ToggleSwitch';
 
 import styles from './NewPlantPage.module.css';
@@ -23,7 +24,7 @@ function NewPlantPage(): JSX.Element {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1 className={styles.header__title}>NewPlant</h1>
+        <SideNav showSideNavLabel="NewPlant" />
       </header>
 
       <main className={styles.main}>
