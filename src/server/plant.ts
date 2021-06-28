@@ -18,6 +18,10 @@ export async function findPlant(
   return await getPlantsCollection().findOne(plant);
 }
 
+export async function findPlants(): Promise<NewPlant[]> {
+  return await getPlantsCollection().find().toArray();
+}
+
 export async function deletePlant(plant: Partial<NewPlant>): Promise<boolean> {
   const result = await getPlantsCollection().deleteOne(plant);
   return typeof result.deletedCount === 'undefined' || result.deletedCount > 0;
