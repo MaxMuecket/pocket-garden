@@ -1,4 +1,4 @@
-export type NewPlant = {
+export type Plant = {
   imagePath: string;
   name: string;
   firstMonth: number;

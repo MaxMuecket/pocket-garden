@@ -7,7 +7,7 @@ Content-Type: application/json
 
 {
 "imagePath": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Athyrium_filix-femina.jpg/800px-Athyrium_filix-femina.jpg",
-"name": "Fern",
+"name": "Rose",
 "firstMonth": 0,
 "lastMonth": 11,
 "place": 2,
@@ -17,6 +17,10 @@ Content-Type: application/json
 
 ### Find a plant
 GET {{baseUrl}}/api/plants/Fern
+Content-Type: application/json
+
+### Find all plants
+GET {{baseUrl}}/api/plants
 Content-Type: application/json
 
 ### Delete a plant
