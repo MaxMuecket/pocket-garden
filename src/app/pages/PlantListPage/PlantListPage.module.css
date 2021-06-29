@@ -15,3 +15,8 @@
 .main::-webkit-scrollbar {
   display: none;
 }
+
+.main__detailLink {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
