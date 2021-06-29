@@ -20,9 +20,8 @@ router.post('/plants', async (req, res, next) => {
 router.get('/plants', async (_req, res, next) => {
   try {
     const plants = await findPlants();
-    res.json(plants);
     if (!plants) {
-      res.status(404).send('Plant not found');
+      res.status(404).send('Plants not found');
       return;
     }
     res.status(200).json(plants);
