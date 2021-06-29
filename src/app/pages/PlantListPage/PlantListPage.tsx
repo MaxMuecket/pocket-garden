@@ -1,18 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './PlantListPage.module.css';
 
 import PlantCard from '../../components/PlantCard/PlantCard';
 import SideNav from '../../components/SideNav/SideNav';
 
-import { NewPlant } from '../../../types';
+import { Link } from 'react-router-dom';
+import usePlants from '../../hooks/usePlants';
 
 function PlantListPage(): JSX.Element {
-  const [plants, setPlants] = useState<NewPlant[]>([]);
-  useEffect(() => {
-    fetch('/api/plants')
-      .then((response) => response.json())
-      .then((plants) => setPlants(plants));
-  }, []);
+  const { plants, isLoading, errorMessage } = usePlants();
+
+  if (errorMessage) {
+    return <div>Error</div>;
+  }
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!plants) {
+    return <div>Pants not found</div>;
+  }
 
   return (
     <div className={styles.container}>
@@ -21,12 +29,17 @@ function PlantListPage(): JSX.Element {
       </header>
       <main className={styles.main}>
         {plants.map((plant) => (
-          <PlantCard
-            key={plant.name}
-            name={plant.name}
-            imgSrc={plant.imagePath}
-            imgName={plant.note}
-          />
+          <Link
+            to={`/plants/${plant.name}`}
+            className={styles.main__detailLink}
+          >
+            <PlantCard
+              key={plant.name}
+              name={plant.name}
+              imgSrc={plant.imagePath}
+              imgName={plant.note}
+            />
+          </Link>
         ))}
       </main>
     </div>
