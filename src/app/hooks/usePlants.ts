@@ -1,12 +1,12 @@
-import { NewPlant } from '../../types';
+import { Plant } from '../../types';
 import useFetch from './useFetch';
 
 function usePlants(): {
-  plants: NewPlant[] | null;
+  plants: Plant[] | null;
   isLoading: boolean;
   errorMessage: string | null;
 } {
-  const { data: plants, isLoading, errorMessage } = useFetch<NewPlant[]>(
+  const { data: plants, isLoading, errorMessage } = useFetch<Plant[]>(
     `/api/plants/`
   );
 
