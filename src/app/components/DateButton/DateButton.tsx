@@ -27,7 +27,11 @@ function DateButton({ month, onMonthChange }: DateButtonProps): JSX.Element {
   }
 
   return (
-    <button className={styles.button} onClick={() => handleClick()}>
+    <button
+      className={styles.button}
+      onClick={() => handleClick()}
+      type="button"
+    >
       {buttonDate[month]}
     </button>
   );
