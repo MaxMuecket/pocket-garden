@@ -19,7 +19,7 @@ function PlantListPage(): JSX.Element {
   }
 
   if (!plants) {
-    return <div>Pants not found</div>;
+    return <div>Plants not found</div>;
   }
 
   return (
