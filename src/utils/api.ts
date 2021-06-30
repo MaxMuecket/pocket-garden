@@ -23,11 +23,13 @@ export async function uploadPlantImage(
   formData.append('file', imageFile);
   formData.append(
     'upload_preset',
-    `${process.env.VITE_CLOUDINARY_PRESET_NAME}`
+    `${import.meta.env.VITE_CLOUDINARY_PRESET_NAME}`
   );
 
   const cloudinaryResponse = await fetch(
-    `https://api.cloudinary.com/v1_1/${process.env.VITE_CLOUDINARY_CLOUD_NAME}/upload`,
+    `https://api.cloudinary.com/v1_1/${
+      import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
+    }/upload`,
     {
       method: 'post',
       body: formData,
