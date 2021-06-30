@@ -9,7 +9,11 @@ import ToggleSwitch from '../../components/ToggleSwitch/ToggleSwitch';
 
 import styles from './NewPlantPage.module.css';
 
+import { postPlant, uploadPlantImage } from '../../../utils/api';
+import { Plant } from '../../../types';
+
 function NewPlantPage(): JSX.Element {
+  const [imagePath, setImagePath] = useState('src/app/assets/ImageUpload.png');
   const [name, setName] = useState('');
   const [firstMonth, setFirstMonth] = useState(0);
   const [lastMonth, setLastMonth] = useState(0);
@@ -17,8 +21,36 @@ function NewPlantPage(): JSX.Element {
   const [active, setActive] = useState(false);
   const [note, setNote] = useState('');
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    setImagePath('src/app/assets/ImageUpload.png');
+    setName('');
+    setFirstMonth(0);
+    setLastMonth(0);
+    setPlace(0);
+    setActive(false);
+    setNote('');
+
+    const plant: Plant = {
+      imagePath,
+      name,
+      firstMonth,
+      lastMonth,
+      place,
+      active,
+      note,
+    };
+    await postPlant(plant);
+  }
+
+  async function handleImageChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const imageFile = event.target.files?.item(0);
+    if (!imageFile) {
+      return;
+    }
+    const imagePath = await uploadPlantImage(imageFile);
+    setImagePath(imagePath.secure_url);
   }
 
   return (
@@ -29,8 +61,14 @@ function NewPlantPage(): JSX.Element {
 
       <main className={styles.main}>
         <form onSubmit={handleSubmit} className={styles.form}>
-          <input type="file" className={styles.form__file} />
-
+          <label className={styles.form__label}>
+            <input
+              type="file"
+              onChange={handleImageChange}
+              className={styles.form__file}
+            />
+            <img src={imagePath} className={styles.form__image} />
+          </label>
           <div className={styles.form__inputName}>
             <PageInput
               variant="newPlantName"
