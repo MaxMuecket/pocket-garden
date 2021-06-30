@@ -24,7 +24,11 @@ function NewPlantPage(): JSX.Element {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    setImagePath('src/app/assets/ImageUpload.png');
+    setImagePath(
+      `https://res.cloudinary.com/${
+        import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
+      }/image/upload/v1625069844/wjeyufb3k6v4myiuts6d.png`
+    );
     setName('');
     setFirstMonth(0);
     setLastMonth(0);
