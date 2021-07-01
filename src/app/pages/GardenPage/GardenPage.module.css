@@ -17,6 +17,19 @@
   grid-template-rows: 4% 22% 15% 26%;
 }
 
+@media (max-width: 375px) {
+  .main {
+    display: grid;
+    grid-template-columns: 4% 43% 3% 48%;
+    grid-template-rows: 2% 20% 11% 21% 31%;
+  }
+
+  .container {
+    background-image: url('../../assets/cover_iPhone_6.png');
+    overflow: hidden;
+  }
+}
+
 .main__newPlant {
   grid-column: 4;
   grid-row: 2;
