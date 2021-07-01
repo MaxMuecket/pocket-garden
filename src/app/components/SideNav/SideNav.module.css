@@ -42,12 +42,11 @@
   top: 0;
   left: 0;
   transition: 650ms;
-  height: 12em;
-  width: 14em;
+  height: 14em;
+  width: 20em;
   border-radius: 0 0 5em 0;
   padding-left: 0.3em;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
-  z-index: 1;
 }
 
 .sideNav__menu_items {
