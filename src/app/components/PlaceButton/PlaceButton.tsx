@@ -14,7 +14,11 @@ function PlaceButton({ place, onPlaceChange }: PlaceButtonProps): JSX.Element {
   }
 
   return (
-    <button className={styles.button} onClick={() => handleClick()}>
+    <button
+      className={styles.button}
+      onClick={() => handleClick()}
+      type="button"
+    >
       {buttonPlace[place]}
     </button>
   );

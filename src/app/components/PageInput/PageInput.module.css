@@ -1,5 +1,5 @@
 .newPlantName {
-  width: 24.75rem;
+  width: 100%;
   height: 3rem;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
   border-width: 0;
@@ -11,7 +11,7 @@
 }
 
 .newTaskTitle {
-  width: 24.75rem;
+  width: 100%;
   height: 3rem;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
   border-width: 0;
@@ -25,7 +25,7 @@
 }
 
 .newTaskDate {
-  width: 24.75rem;
+  width: 100%;
   height: 3rem;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
   border-width: 0;
