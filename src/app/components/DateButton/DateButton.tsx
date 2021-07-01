@@ -3,6 +3,7 @@ import styles from './DateButton.module.css';
 
 export type DateButtonProps = {
   month: number;
+  disabled?: boolean;
   onMonthChange: (month: number) => void;
 };
 
@@ -21,7 +22,11 @@ const buttonDate = [
   'Dec',
 ];
 
-function DateButton({ month, onMonthChange }: DateButtonProps): JSX.Element {
+function DateButton({
+  month,
+  disabled,
+  onMonthChange,
+}: DateButtonProps): JSX.Element {
   function handleClick() {
     onMonthChange((month + 1) % 11);
   }
@@ -31,6 +36,7 @@ function DateButton({ month, onMonthChange }: DateButtonProps): JSX.Element {
       className={styles.button}
       onClick={() => handleClick()}
       type="button"
+      disabled={disabled}
     >
       {buttonDate[month]}
     </button>
