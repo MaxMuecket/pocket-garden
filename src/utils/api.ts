@@ -1,5 +1,6 @@
-import { CloudinaryImage, Plant } from '../types';
+import { CloudinaryImage, Plant, Task } from '../types';
 
+// api for Plants
 export async function postPlant(plant: Plant): Promise<Plant> {
   const response = await fetch('/api/plants', {
     method: 'POST',
@@ -37,4 +38,21 @@ export async function uploadPlantImage(
   );
   const cloudinaryResult = await cloudinaryResponse.json();
   return cloudinaryResult;
+}
+
+// api for Tasks
+export async function postTask(task: Task): Promise<Task> {
+  const response = await fetch('/api/tasks', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(task),
+  });
+  if (!response.ok) {
+    const errorMessage = await response.text();
+    throw errorMessage;
+  }
+  const result: Task = await response.json();
+  return result;
 }

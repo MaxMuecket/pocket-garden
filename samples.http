@@ -26,3 +26,25 @@ Content-Type: application/json
 ### Delete a plant
 DELETE  {{baseUrl}}/api/plants/Fern
 Content-Type: application/json
+
+### Add a task
+POST {{baseUrl}}/api/tasks
+Content-Type: application/json
+
+{
+"title": "Gießen", 
+"description": "viel Giesen",
+"date": "12.06.2021"
+}
+
+### Find a task
+GET {{baseUrl}}/api/tasks/Gießen
+Content-Type: application/json
+
+### Find all tasks
+GET {{baseUrl}}/api/tasks
+Content-Type: application/json
+
+### Delete a task
+DELETE  {{baseUrl}}/api/tasks/Gießen
+Content-Type: application/json
