@@ -4,10 +4,15 @@ import styles from './ToggleSwitch.module.css';
 
 export type ToggleSwitchProps = {
   checked: boolean;
+  disabled?: boolean;
   onChange: (toggled: boolean) => void;
 };
 
-function ToggleSwitch({ checked, onChange }: ToggleSwitchProps): JSX.Element {
+function ToggleSwitch({
+  checked,
+  disabled,
+  onChange,
+}: ToggleSwitchProps): JSX.Element {
   return (
     <div className={styles.container}>
       <p>No</p>
@@ -15,6 +20,7 @@ function ToggleSwitch({ checked, onChange }: ToggleSwitchProps): JSX.Element {
         <input
           type="checkbox"
           checked={checked}
+          disabled={disabled}
           onChange={() => onChange(!checked)}
         />
         <span className={styles.slider}></span>

@@ -9,6 +9,10 @@
   font-size: 1.25rem;
   padding: 1rem 1rem;
   border-radius: 0 0 1.875rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .newTaskDescription {
@@ -22,6 +26,7 @@
   background-color: var(--primary-color);
   font-size: 1.25rem;
   padding: 1rem 1rem;
+  border-radius: 0 0 1.875rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
   overflow-y: scroll;
