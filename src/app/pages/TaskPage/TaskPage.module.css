@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+  background-image: url('../../assets/cover_iPfone_12.png');
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.header {
+  padding-bottom: 1em;
+  padding-left: 0.3em;
+}
+
+.article {
+  display: grid;
+  gap: 1em;
+  padding: 1em;
+}
+
+.article__button {
+  display: flex;
+  justify-self: center;
+}
+
+@media (max-width: 375px) {
+  .container {
+    background-image: url('../../assets/cover_iPhone_6_7_8.png');
+    overflow: hidden;
+  }
+}
