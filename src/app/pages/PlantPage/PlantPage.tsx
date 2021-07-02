@@ -1,4 +1,8 @@
 import React from 'react';
+import { useHistory, useParams } from 'react-router-dom';
+import styles from './PlantPage.module.css';
+import usePlantDetails from '../../hooks/usePlantDetails';
+
 import DateButton from '../../components/DateButton/DateButton';
 import MainButton from '../../components/MainButton/MainButton';
 import PageInput from '../../components/PageInput/PageInput';
@@ -7,12 +11,8 @@ import PlaceButton from '../../components/PlaceButton/PlaceButton';
 import SideNav from '../../components/SideNav/SideNav';
 import ToggleSwitch from '../../components/ToggleSwitch/ToggleSwitch';
 
-import styles from './PlantPage.module.css';
-
-import usePlantDetails from '../../hooks/usePlantDetails';
-import { useParams } from 'react-router-dom';
-
 function PlantPage(): JSX.Element {
+  const history = useHistory();
   const { name } = useParams<{ name: string }>();
   const { plant, isLoading, errorMessage } = usePlantDetails(name);
 
@@ -28,12 +28,10 @@ function PlantPage(): JSX.Element {
     return <div>Plant not found</div>;
   }
 
-  console.log(plant);
-
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <SideNav showSideNavLabel={`${plant.name}`} />
+        <SideNav showSideNavLabel={plant.name} />
       </header>
 
       <main className={styles.main}>
@@ -52,7 +50,7 @@ function PlantPage(): JSX.Element {
               variant="newPlantName"
               placeholder="Please enter a name"
               value={plant.name}
-              onNameChange={console.log}
+              onChange={console.log}
               disabled
             />
           </div>
@@ -96,7 +94,10 @@ function PlantPage(): JSX.Element {
             />
           </div>
           <div className={styles.article__submitButton}>
-            <MainButton children="task" />
+            <MainButton
+              children="task"
+              onClick={() => history.push('/new-task')}
+            />
             <MainButton children="edit" />
           </div>
         </article>
