@@ -7,6 +7,8 @@ import GardenPage from './pages/GardenPage/GardenPage';
 import styles from './App.module.css';
 import NewPlantPage from './pages/NewPlantPage/NewPlantPage';
 import PlantListPage from './pages/PlantListPage/PlantListPage';
+
+import NewTaskPage from './pages/NewTaskPage/NewTaskPage';
 import PlantPage from './pages/PlantPage/PlantPage';
 
 type CustomRouteProps = RouteProps & {
@@ -20,6 +22,8 @@ const routes: CustomRouteProps[] = [
   { path: '/new-plant', Component: NewPlantPage },
   { path: '/plant-list', Component: PlantListPage },
   { path: '/plants/:name', Component: PlantPage },
+  { path: '/new-task', Component: NewTaskPage },
+
 ];
 
 function App(): JSX.Element {

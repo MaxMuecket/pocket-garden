@@ -65,3 +65,30 @@
 .accent {
   color: var(--accent-color);
 }
+
+@media (max-width: 375px) {
+  .newPlant {
+    width: 10rem;
+    height: 10rem;
+    line-height: 10rem;
+    font-size: 1.8rem;
+  }
+  .plantList {
+    width: 9rem;
+    height: 9rem;
+    line-height: 9rem;
+    font-size: 1.8rem;
+  }
+  .newTask {
+    width: 11rem;
+    height: 11rem;
+    line-height: 11rem;
+    font-size: 1.8rem;
+  }
+  .gardening {
+    width: 12rem;
+    height: 12rem;
+    line-height: 12rem;
+    font-size: 1.8rem;
+  }
+}

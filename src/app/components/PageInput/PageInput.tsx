@@ -6,6 +6,7 @@ export type PageInputProps = {
   placeholder: string;
   value: string;
   disabled?: boolean;
+  type?: string;
   onNameChange: (name: string) => void;
   variant: 'newPlantName' | 'newTaskTitle' | 'newTaskDate';
 };
@@ -16,6 +17,7 @@ function PageInput({
   value,
   variant,
   disabled,
+  type,
   onNameChange,
 }: PageInputProps): JSX.Element {
   return (
@@ -26,6 +28,7 @@ function PageInput({
         placeholder={placeholder}
         value={value}
         disabled={disabled}
+        type={type}
         onChange={(event) => onNameChange(event.target.value)}
       />
     </label>

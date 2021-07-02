@@ -29,3 +29,9 @@ export type CloudinaryImage = {
   version_id: string;
   width: number;
 };
+
+export type Task = {
+  title: string;
+  description: string;
+  date: string | number;
+};
