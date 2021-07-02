@@ -5,8 +5,8 @@ export type PageTextareaProps = {
   placeholder: string;
   value: string;
   disabled?: boolean;
-  variant: 'newPlantNote' | 'newTaskDescription';
   onChange: (value: string) => void;
+  variant: 'newPlantNote' | 'newTaskDescription';
 };
 
 function PageTextarea({
