@@ -1,8 +1,12 @@
 .container {
   position: relative;
-  background-image: url('../../assets/leaf.png');
+  background-image: url('../../assets/cover_iPhone_12.png');
   background-repeat: no-repeat;
   height: 100vh;
+}
+
+.header {
+  padding: 0.5em 0 1em 0.3em;
 }
 
 .main {
@@ -11,6 +15,24 @@
   column-gap: 1em;
   height: 50em;
   overflow: scroll;
+}
+
+@media (max-width: 375px) {
+  .main {
+    height: 36.5em;
+  }
+}
+
+@media (min-height: 668px) {
+  .main {
+    height: 45em;
+  }
+}
+
+@media (min-height: 926px) {
+  .main {
+    height: 50em;
+  }
 }
 
 .main::-webkit-scrollbar {
