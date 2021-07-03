@@ -6,8 +6,7 @@
 }
 
 .header {
-  padding-bottom: 1em;
-  padding-left: 0.3em;
+  padding: 0.5em 0 1em 0.3em;
 }
 
 .main {
@@ -20,13 +19,19 @@
 
 @media (max-width: 375px) {
   .main {
-    height: 35em;
+    height: 36.5em;
   }
 }
 
 @media (min-height: 668px) {
   .main {
     height: 45em;
+  }
+}
+
+@media (min-height: 926px) {
+  .main {
+    height: 50em;
   }
 }
 
