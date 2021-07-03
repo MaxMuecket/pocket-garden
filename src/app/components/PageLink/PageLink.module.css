@@ -9,7 +9,7 @@
   line-height: 12.5rem;
   border-radius: 100%;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
-  font-size: 2.188rem;
+  font-size: 2.3rem;
   font-family: var(--font-family);
   font-weight: 300;
 }
@@ -25,7 +25,7 @@
   line-height: 10.8rem;
   border-radius: 100%;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
-  font-size: 2.188rem;
+  font-size: 2.3rem;
   font-family: var(--font-family);
   font-weight: 300;
 }
@@ -41,7 +41,7 @@
   line-height: 13.25rem;
   border-radius: 100%;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
-  font-size: 2.188rem;
+  font-size: 2.3rem;
   font-family: var(--font-family);
   font-weight: 300;
 }
@@ -57,7 +57,7 @@
   line-height: 14rem;
   border-radius: 100%;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
-  font-size: 2.188rem;
+  font-size: 2.3rem;
   font-family: var(--font-family);
   font-weight: 300;
 }
@@ -71,24 +71,24 @@
     width: 10rem;
     height: 10rem;
     line-height: 10rem;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
   .plantList {
     width: 9rem;
     height: 9rem;
     line-height: 9rem;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
   .newTask {
     width: 11rem;
     height: 11rem;
     line-height: 11rem;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
   .gardening {
     width: 12rem;
     height: 12rem;
     line-height: 12rem;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
