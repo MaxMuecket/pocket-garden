@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-
+import { useHistory } from 'react-router-dom';
 import styles from './NewTaskPage.module.css';
 import { Task } from '../../../types';
 import { postTask } from '../../../utils/api';
+import usePlants from '../../hooks/usePlants';
 
 import PageInput from '../../components/PageInput/PageInput';
 import SideNav from '../../components/SideNav/SideNav';
 import MainButton from '../../components/MainButton/MainButton';
 import PageTextarea from '../../components/PageTextarea/PageTextarea';
-import usePlants from '../../hooks/usePlants';
 
 function NewTaskPage(): JSX.Element {
+  const history = useHistory();
   const { plants, isLoading, errorMessage } = usePlants();
   const [plantSelect, setPlantSelect] = useState('');
   const [title, setTitle] = useState('');
@@ -45,6 +46,7 @@ function NewTaskPage(): JSX.Element {
     setDate('');
 
     await postTask(task);
+    history.push('/gardening');
   }
 
   return (
@@ -56,9 +58,12 @@ function NewTaskPage(): JSX.Element {
       <main className={styles.main}>
         <form onSubmit={handleSubmit} className={styles.form}>
           <select
+            className={styles.form__select}
             value={plantSelect}
             onChange={(event) => setPlantSelect(event.target.value)}
           >
+            {' '}
+            <option>--Please select a plant--</option>
             {plants.map((plant) => (
               <option>{plant.name}</option>
             ))}
