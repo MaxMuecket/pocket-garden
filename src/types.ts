@@ -22,7 +22,7 @@ export type CloudinaryImage = {
   resource_type: string;
   secure_url: string;
   signature: string;
-  tags: [];
+  tags: string[];
   type: string;
   url: string;
   version: number;
@@ -31,7 +31,8 @@ export type CloudinaryImage = {
 };
 
 export type Task = {
+  plantSelect: string;
   title: string;
   description: string;
-  date: string | number;
+  date: string;
 };

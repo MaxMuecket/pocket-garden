@@ -8,24 +8,41 @@ import PageInput from '../../components/PageInput/PageInput';
 import SideNav from '../../components/SideNav/SideNav';
 import MainButton from '../../components/MainButton/MainButton';
 import PageTextarea from '../../components/PageTextarea/PageTextarea';
+import usePlants from '../../hooks/usePlants';
 
 function NewTaskPage(): JSX.Element {
+  const { plants, isLoading, errorMessage } = usePlants();
+  const [plantSelect, setPlantSelect] = useState('');
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [date, setDate] = useState('');
 
+  if (errorMessage) {
+    return <div>Error</div>;
+  }
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!plants) {
+    return <div>Plants not found</div>;
+  }
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    setTitle('');
-    setDescription('');
-    setDate('');
-
     const task: Task = {
+      plantSelect,
       title,
       description,
       date,
     };
+
+    setPlantSelect('');
+    setTitle('');
+    setDescription('');
+    setDate('');
 
     await postTask(task);
   }
@@ -38,11 +55,20 @@ function NewTaskPage(): JSX.Element {
 
       <main className={styles.main}>
         <form onSubmit={handleSubmit} className={styles.form}>
+          <select
+            value={plantSelect}
+            onChange={(event) => setPlantSelect(event.target.value)}
+          >
+            {plants.map((plant) => (
+              <option>{plant.name}</option>
+            ))}
+          </select>
+
           <PageInput
             variant="newTaskTitle"
             placeholder="Title..."
             value={title}
-            onNameChange={setTitle}
+            onChange={setTitle}
           />
           <PageTextarea
             variant="newTaskDescription"
@@ -52,9 +78,9 @@ function NewTaskPage(): JSX.Element {
           />
           <PageInput
             variant="newTaskDate"
-            placeholder="dd/mm/jjjj"
+            placeholder=""
             value={date}
-            onNameChange={setDate}
+            onChange={setDate}
             type="date"
           />
           <div className={styles.form__button}>
@@ -65,5 +91,4 @@ function NewTaskPage(): JSX.Element {
     </div>
   );
 }
-
 export default NewTaskPage;

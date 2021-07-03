@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import styles from './NewPlantPage.module.css';
+import { postPlant, uploadPlantImage } from '../../../utils/api';
+import { Plant } from '../../../types';
+
 import DateButton from '../../components/DateButton/DateButton';
 import MainButton from '../../components/MainButton/MainButton';
 import PageInput from '../../components/PageInput/PageInput';
@@ -7,13 +12,14 @@ import PlaceButton from '../../components/PlaceButton/PlaceButton';
 import SideNav from '../../components/SideNav/SideNav';
 import ToggleSwitch from '../../components/ToggleSwitch/ToggleSwitch';
 
-import styles from './NewPlantPage.module.css';
-
-import { postPlant, uploadPlantImage } from '../../../utils/api';
-import { Plant } from '../../../types';
-
 function NewPlantPage(): JSX.Element {
-  const [imagePath, setImagePath] = useState('src/app/assets/ImageUpload.png');
+  const history = useHistory();
+
+  const [imagePath, setImagePath] = useState(
+    `https://res.cloudinary.com/${
+      import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
+    }/image/upload/v1625069844/wjeyufb3k6v4myiuts6d.png`
+  );
   const [name, setName] = useState('');
   const [firstMonth, setFirstMonth] = useState(0);
   const [lastMonth, setLastMonth] = useState(0);
@@ -24,18 +30,6 @@ function NewPlantPage(): JSX.Element {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    setImagePath(
-      `https://res.cloudinary.com/${
-        import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
-      }/image/upload/v1625069844/wjeyufb3k6v4myiuts6d.png`
-    );
-    setName('');
-    setFirstMonth(0);
-    setLastMonth(0);
-    setPlace(0);
-    setActive(false);
-    setNote('');
-
     const plant: Plant = {
       imagePath,
       name,
@@ -45,7 +39,21 @@ function NewPlantPage(): JSX.Element {
       active,
       note,
     };
+
+    setName('');
+    setFirstMonth(0);
+    setLastMonth(0);
+    setPlace(0);
+    setActive(false);
+    setNote('');
+    setImagePath(
+      `https://res.cloudinary.com/${
+        import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
+      }/image/upload/v1625069844/wjeyufb3k6v4myiuts6d.png`
+    );
+
     await postPlant(plant);
+    history.push('/plant-list');
   }
 
   async function handleImageChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -78,7 +86,7 @@ function NewPlantPage(): JSX.Element {
               variant="newPlantName"
               placeholder="Please enter a name"
               value={name}
-              onNameChange={setName}
+              onChange={setName}
             />
           </div>
 

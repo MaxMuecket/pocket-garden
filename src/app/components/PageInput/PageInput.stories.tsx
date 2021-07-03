@@ -24,6 +24,6 @@ newTaskTitle.args = {
 
 export const newTaskDate = Template.bind({});
 newTaskDate.args = {
-  placeholder: 'Date: dd/mm/yyyy',
+  placeholder: '',
   variant: 'newTaskDate',
 };
