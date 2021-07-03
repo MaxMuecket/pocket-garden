@@ -7,7 +7,6 @@
 }
 
 .cardImage {
-  position: relative;
   height: 9em;
   overflow: hidden;
   border-radius: 0 0 0 5em;
