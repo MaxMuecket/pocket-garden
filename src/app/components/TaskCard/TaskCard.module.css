@@ -1,36 +1,43 @@
 .container {
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 50% 50%;
   background-color: transparent;
   gap: 1em;
   margin: 1em;
 }
 
-.cardImage {
+.cardPlantName {
   height: 9em;
   overflow: hidden;
-  border-radius: 0 0 0 5em;
+  border-radius: 1em 1em 0 5em;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-left: 1em;
 }
 
-.cardImage img {
-  max-width: 100%;
-  height: auto;
+.cardPlantName h3 {
+  color: var(--secondary-text-color);
+  font-weight: 300;
+  font-size: 2em;
+  hyphens: auto;
 }
 
 .cardInfo {
+  border-radius: 1em 1em 1em 0;
   display: grid;
   grid-template-columns: 80% 20%;
   height: 9em;
   background-color: var(--primary-color);
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.25);
+  padding-left: 1em;
 }
 
 .cardInfo__title {
   font-family: var(--font-family);
   font-weight: 300;
-  padding: 0.5em;
+  font-size: 1.5em;
   hyphens: auto;
+  padding-top: 0.6em;
 }
 
 .cardInfo__button {
@@ -38,7 +45,6 @@
   height: 1em;
   border: none;
   background: transparent;
-  cursor: pointer;
   padding: 0.5em;
-  padding-top: 1em;
+  padding-top: 1.3em;
 }

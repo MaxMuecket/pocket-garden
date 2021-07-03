@@ -7,7 +7,7 @@ function usePlants(): {
   errorMessage: string | null;
 } {
   const { data: plants, isLoading, errorMessage } = useFetch<Plant[]>(
-    `/api/plants/`
+    `/api/plants`
   );
 
   return { plants, isLoading, errorMessage };
