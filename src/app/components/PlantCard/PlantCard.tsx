@@ -12,7 +12,7 @@ function PlantCard({ imgSrc, imgName, name }: PlantCardProps): JSX.Element {
   return (
     <div className={styles.container}>
       <div className={styles.cardImage}>
-        <img src={imgSrc} alt={imgName} />
+        <img src={imgSrc} alt={imgName} className={styles.cardImage__img} />
       </div>
       <div className={styles.cardInfo}>
         <h3 className={styles.cardInfo__title}>{name}</h3>

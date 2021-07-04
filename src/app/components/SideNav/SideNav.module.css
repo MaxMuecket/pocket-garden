@@ -20,8 +20,12 @@
   font-size: 3em;
   font-weight: 300;
   border: none;
-  color: var(--secondary-text-color);
-  background-color: transparent;
+  color: var(--accent-color);
+  background: var(--secondary-color);
+  border-radius: 0 0 0.2em 0;
+  padding-top: 0.15em;
+  padding-left: 0.4em;
+  opacity: 0.9;
 }
 
 .sideNav__menu {
@@ -37,7 +41,6 @@
 }
 
 .sideNav__menu_active {
-  background-color: var(--primary-color);
   position: absolute;
   top: 0;
   left: 0;
@@ -45,24 +48,26 @@
   height: 14em;
   width: 20em;
   border-radius: 0 0 5em 0;
-  padding-left: 0.3em;
-  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
 }
 
 .sideNav__menu_items {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.2em;
+  gap: 0.5em;
 }
 
 .sideNav__menu_items a {
+  background: var(--secondary-color);
   text-decoration: none;
   color: var(--secondary-text-color);
   font-family: var(--font-family);
   font-weight: 300;
   font-size: 1.5em;
-  padding-left: 0.35em;
+  padding: 0.1em 0.6em 0.1em 0.35em;
+  border-radius: 0 0.2em 0.2em 0;
+  padding-left: 0.85em;
+  opacity: 0.9;
 }
 
 .sideNav__menu_items a:focus {

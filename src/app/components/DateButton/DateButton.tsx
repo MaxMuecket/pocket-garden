@@ -28,7 +28,7 @@ function DateButton({
   onMonthChange,
 }: DateButtonProps): JSX.Element {
   function handleClick() {
-    onMonthChange((month + 1) % 11);
+    onMonthChange((month + 1) % 12);
   }
 
   return (

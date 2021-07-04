@@ -22,10 +22,6 @@ router.post('/plants', async (req, res, next) => {
 router.get('/plants', async (_req, res, next) => {
   try {
     const plants = await findPlants();
-    if (!plants) {
-      res.status(404).send('Plants not found');
-      return;
-    }
     res.status(200).json(plants);
   } catch (error) {
     next(error);
@@ -75,13 +71,9 @@ router.post('/tasks', async (req, res, next) => {
   }
 });
 
-router.get('/Tasks', async (_req, res, next) => {
+router.get('/tasks', async (_req, res, next) => {
   try {
     const tasks = await findTasks();
-    if (!tasks) {
-      res.status(404).send('Tasks not found');
-      return;
-    }
     res.status(200).json(tasks);
   } catch (error) {
     next(error);

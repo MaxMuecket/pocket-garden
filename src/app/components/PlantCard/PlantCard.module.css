@@ -9,16 +9,16 @@
 .cardImage {
   height: 9em;
   overflow: hidden;
-  border-radius: 0 0 0 5em;
+  border-radius: 1em 1em 0 5em;
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.25);
 }
 
-.cardImage img {
-  max-width: 100%;
-  height: auto;
+.cardImage__img {
+  width: 120%;
 }
 
 .cardInfo {
+  border-radius: 1em 1em 1em 0;
   display: grid;
   grid-template-columns: 80% 20%;
   height: 9em;

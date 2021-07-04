@@ -1,13 +1,12 @@
 .container {
   position: relative;
-  background-image: url('../../assets/leaf.png');
+  background-image: url('../../assets/cover_NewPlantPage.png');
   background-repeat: no-repeat;
   height: 100vh;
 }
 
 .header {
-  padding-bottom: 1em;
-  padding-left: 0.3em;
+  padding: 0.5em 0 1em 0.3em;
 }
 
 .form {
@@ -16,24 +15,12 @@
   grid-template-rows: 40% 10% 10% 10% 10% 26%;
 }
 
-@media (max-width: 375px) {
-  .form {
-    display: grid;
-    grid-template-columns: 4% 1.5% 89% 5.5%;
-    grid-template-rows: 40% 10% 10% 10% 10% 26%;
-  }
-  .container {
-    background-image: url('../../assets/cover_iPhone_6.png');
-    overflow: hidden;
-  }
-}
-
 .form__label {
   width: 100%;
   height: 16.375em;
   background-color: var(--background-desktop-color);
   box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.35);
-  border-radius: 0 7rem 0 0;
+  border-radius: 1em 4rem 1em 1em;
   grid-column: 3;
   grid-row: 1;
   overflow: hidden;
@@ -102,4 +89,46 @@ h3 {
   font-family: var(--font-family);
   font-size: 1.3em;
   font-weight: 300;
+}
+
+@media (max-width: 375px) {
+  .form {
+    display: grid;
+    grid-template-columns: 4% 1.5% 89% 5.5%;
+    grid-template-rows: 30% 9% 9% 9% 9% 23%;
+  }
+  .form__label {
+    height: 10em;
+  }
+  .container {
+    overflow: hidden;
+  }
+}
+
+@media (min-height: 668px) {
+  .form {
+    display: grid;
+    grid-template-columns: 4% 1.5% 89% 5.5%;
+    grid-template-rows: 38% 10% 10% 10% 10% 22%;
+  }
+  .form__label {
+    height: 15em;
+  }
+  .container {
+    overflow: hidden;
+  }
+}
+
+@media (min-height: 926px) {
+  .form {
+    display: grid;
+    grid-template-columns: 4% 1.5% 89% 5.5%;
+    grid-template-rows: 42% 10% 10% 10% 10% 22%;
+  }
+  .form__label {
+    height: 18em;
+  }
+  .container {
+    overflow: hidden;
+  }
 }
