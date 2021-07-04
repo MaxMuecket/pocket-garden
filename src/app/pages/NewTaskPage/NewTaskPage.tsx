@@ -62,8 +62,7 @@ function NewTaskPage(): JSX.Element {
             value={plantSelect}
             onChange={(event) => setPlantSelect(event.target.value)}
           >
-            {' '}
-            <option>--Please select a plant--</option>
+            <option>-- Please select a plant --</option>
             {plants.map((plant) => (
               <option>{plant.name}</option>
             ))}

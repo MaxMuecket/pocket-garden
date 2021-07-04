@@ -26,7 +26,6 @@
   border: none;
   background-color: var(--secondary-color);
   color: var(--secondary-text-color);
-  text-indent: 28%;
 }
 
 @media (max-width: 375px) {
