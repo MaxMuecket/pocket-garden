@@ -5,6 +5,8 @@
 }
 
 .header__title {
+  text-decoration: none;
+  color: var(--primary-text-color);
   font-size: 3.438rem;
   font-weight: 300;
   margin: 0;
