@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageLink from '../../components/PageLink/PageLink';
 
 import styles from './GardenPage.module.css';
@@ -7,7 +8,9 @@ function GardenPage(): JSX.Element {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1 className={styles.header__title}>Garden</h1>
+        <Link to={'./'} className={styles.header__title}>
+          Garden
+        </Link>
       </header>
       <main className={styles.main}>
         <div className={styles.main__newPlant}>

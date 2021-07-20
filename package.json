@@ -1,5 +1,5 @@
 {
-  "name": "vite-boilerplate",
+  "name": "Pocket-Garden",
   "version": "0.0.0",
   "scripts": {
     "client:dev": "vite",
