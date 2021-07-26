@@ -1,13 +1,19 @@
 # 👩‍🌾👨‍🌾 Pocket Garden 🌱
 
-Pocket Garden is a web application for managing your garden. You can add new or already existing Plants from your real Garden in the little virtual helper. Then it's time to create tasks to remind yourself to give your garden what it needs!
+<p>Pocket Garden is a web application for managing your garden. You can add new or already existing Plants from your real Garden in the little virtual helper. Then it's time to create tasks to remind yourself to give your garden what it needs!</p>
 
-<div style="background-color: #90a686; display: flex; justify-content: space-around; padding: 1em; border-radius: 3em; align-items: center;">
+<br/>
+
 <img src="src/app/assets/pocket-garden_landingpage.png" alt="Landingpage" width="30%"/>
-<a style="color: black; font-size:150%; text-decoration: none;" href="https://pocket-garden.herokuapp.com/">Try it out! *</a>
-<img src="src/app/assets/pocket-garden_plant_fern.png" alt="Fern" width="30%"/>
+
+<img src="src/app/assets/pocket-garden_plant_fern.png" alt="Fern" width="30%" align="right"/>
+
+<div align="center">
+<a href="https://pocket-garden.herokuapp.com/">Try it out! *</a>
 </div>
+
 <br />
+
 <p>* The deployment takes a little longer the first time it is loaded, because Heroku's servers fall asleep.</p>
 
 ## Setup
