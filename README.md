@@ -6,7 +6,10 @@
 
 <img src="src/app/assets/pocket-garden_landingpage.png" alt="Landingpage" width="30%"/>
 
-<img src="src/app/assets/pocket-garden_plant_fern.png" alt="Fern" width="30%" align="right"/>
+<img src="src/app/assets/pocket-garden_plant-list.png" alt="Plant list" width="30%"/>
+</div>
+
+<img src="src/app/assets/pocket-garden_plant_fern.png" alt="Fern" width="30%"/>
 
 <div align="center">
 <a href="https://pocket-garden.herokuapp.com/">Try it out! *</a>
